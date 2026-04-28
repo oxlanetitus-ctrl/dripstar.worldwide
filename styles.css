@@ -1,0 +1,468 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #000;
+    background: #fff;
+    line-height: 1.6;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.container {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+}
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.9rem;
+    font-family: 'Ironwood Medium', 'Bebas Neue', 'Futura', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.15rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #000;
+}
+.logo-img {
+    width: 42px;
+    height: 42px;
+    display: block;
+}
+.brand-text {
+    font-size: 1rem;
+    font-family: 'Bebas Neue', 'Helvetica Neue', Arial, sans-serif;
+}
+.main-nav a {
+    color: #000;
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+}
+.main-nav a:hover {
+    color: #666;
+}
+
+.hero-section {
+    min-height: 88vh;
+    background: url('https://instagram.fers4-1.fna.fbcdn.net/v/t51.71878-15/571077367_1456761555399788_6563535250905643463_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=105&ig_cache_key=Mzc1NzA5NDc5Nzg3OTEyNzQzNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=vckvhiS9RcsQ7kNvwHM0BqL&_nc_oc=AdqojvO6GJmBxIDYJoZEffDOVpGg_s1qDYBjDR0BxovzxyzO_Fd20UOmByR1WK2vikw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fers4-1.fna&_nc_gid=ue0v3pl8ykN2vrKcs2zifw&_nc_ss=7a22e&oh=00_Af1Jr_n8t6yY_NYi2vnzcleO5TUGi_-2hirsPhT3sdastA&oe=69F69191') center/cover no-repeat;
+    display: grid;
+    place-items: center;
+    padding: 120px 0 100px;
+    position: relative;
+}
+.hero-overlay {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    opacity: 0.95;
+    font-family: 'Futura', 'Trebuchet MS', Arial, sans-serif;
+    font-weight: 300;
+}
+.hero-section h1,
+.section-heading h2,
+.about-section h2,
+.newsletter-section h2,
+.site-footer h3 {
+    font-family: 'Bebas Neue', 'Futura', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    letter-spacing: 0.1em;
+}
+.hero-section h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: 1rem;
+    color: #000;
+    font-weight: normal;
+}
+.hero-copy {
+    max-width: 620px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+    font-size: 1.05rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #666;
+}
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.hero-media {
+    min-height: 420px;
+    background: #f5f5f5;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: grid;
+    place-items: center;
+    padding: 16px;
+}
+.hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    padding: 14px 26px;
+    border: 1px solid #000;
+    text-decoration: none;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    transition: transform 200ms ease, background 200ms ease, border-color 200ms ease, color 200ms ease;
+    font-family: 'Bebas Neue', 'Futura', 'Helvetica Neue', Arial, sans-serif;
+    color: #000;
+    background: transparent;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    background: rgba(0, 0, 0, 0.12);
+}
+.btn-primary {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+.btn-secondary {
+    background: transparent;
+    border-color: #000;
+    color: #000;
+}
+.btn-secondary:hover {
+    background: rgba(0, 0, 0, 0.15);
+}
+.new-drop-section {
+    padding: 80px 0;
+}
+.new-drop-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+.new-drop-content h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #000;
+}
+.new-drop-media {
+    min-height: 420px;
+    background: #f5f5f5;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: grid;
+    place-items: center;
+    padding: 16px;
+}
+.new-drop-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+.collection-section,
+.instagram-section {
+    padding: 80px 0 40px;
+}
+.section-heading {
+    text-align: center;
+    margin-bottom: 56px;
+}
+.section-heading h2 {
+    font-size: 2.75rem;
+    color: #000;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+}
+.carousel-wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.product-carousel,
+.instagram-carousel {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 0 16px 20px;
+}
+.product-carousel::-webkit-scrollbar,
+.instagram-carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    background: rgba(255, 255, 255, 0.75);
+    color: #000;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1.45rem;
+    display: grid;
+    place-items: center;
+}
+.carousel-btn.prev {
+    left: 8px;
+}
+.carousel-btn.next {
+    right: 8px;
+}
+.product-card,
+.insta-card {
+    flex: 0 0 min(340px, 100%);
+    scroll-snap-align: start;
+    background: #f5f5f5;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    min-width: 340px;
+}
+.product-card {
+    transition: transform 220ms ease, border-color 220ms ease;
+}
+.product-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 0, 0, 0.35);
+}
+.product-image,
+.insta-card img {
+    width: 100%;
+    min-height: 420px;
+    background: #fff;
+}
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: #fff;
+}
+.product-meta {
+    padding: 22px;
+}
+.product-meta h3 {
+    margin: 0.8rem 0 0.4rem;
+    font-size: 1.4rem;
+    color: #000;
+}
+.product-label {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    opacity: 0.75;
+    font-size: 0.78rem;
+    color: #666;
+}
+.price {
+    margin: 0;
+    opacity: 0.95;
+    font-weight: 600;
+    color: #000;
+}
+.insta-card img {
+    object-fit: contain;
+}
+.insta-card p {
+    margin: 16px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #666;
+}
+.about-section {
+    padding: 80px 0;
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 48px;
+    align-items: center;
+}
+.about-text p {
+    max-width: 520px;
+}
+.about-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.about-text a {
+    margin-top: 2rem;
+}
+.about-image {
+    min-height: 420px;
+    background: #f5f5f5;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: grid;
+    place-items: center;
+}
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.instagram-section {
+    padding: 80px 0 40px;
+}
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+}
+.insta-card {
+    display: block;
+    overflow: hidden;
+    background: #f5f5f5;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: #000;
+    transition: transform 220ms ease, border-color 220ms ease;
+}
+.insta-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 0, 0, 0.35);
+}
+.insta-card img {
+    width: 100%;
+    min-height: 340px;
+    object-fit: cover;
+}
+.insta-card p {
+    margin: 14px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+.newsletter-section {
+    padding: 60px 0 100px;
+}
+.newsletter-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 40px;
+    background: #f5f5f5;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.newsletter-form {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+.newsletter-form input {
+    min-width: 280px;
+    padding: 16px 18px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: transparent;
+    color: #000;
+}
+.newsletter-form input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+.newsletter-form button {
+    border: 1px solid #000;
+}
+.site-footer {
+    padding: 40px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.footer-links a {
+    color: #000;
+    text-decoration: none;
+    margin-left: 24px;
+}
+.footer-links a:first-child {
+    margin-left: 0;
+}
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.footer-logo img {
+    width: 28px;
+    height: 28px;
+}
+@media (max-width: 960px) {
+    .hero-grid,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .carousel-btn {
+        width: 44px;
+        height: 44px;
+    }
+    .product-card,
+    .insta-card {
+        min-width: 280px;
+    }
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media (max-width: 680px) {
+    .main-nav {
+        display: none;
+    }
+    .hero-grid {
+        gap: 32px;
+    }
+    .hero-actions {
+        flex-direction: column;
+    }
+    .carousel-btn {
+        display: none;
+    }
+    .product-card,
+    .insta-card {
+        min-width: 90%;
+    }
+    .newsletter-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
